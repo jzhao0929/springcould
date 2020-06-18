@@ -3,16 +3,30 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.study.springcould.dao.DeptDao">
-    <insert id="addDept" parameterType="Dept">
-        insert into dept (deptname,db_source)
-        values (#{deptname},DADABASE())
+    <resultMap id="BaseResultMap" type="dept" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="dept_name" property="deptName" jdbcType="VARCHAR" />
+        <result column="db_source" property="dbSource" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <insert id="addDept" parameterType="dept">
+        insert into dept (
+            id,
+            dept_name,
+            db_source
+           )
+        values (
+            #{id,jdbcType=BIGINT},
+            #{deptName,jdbcType=VARCHAR},
+            DADABASE()
+          )
     </insert>
     
-    <select id="queryById" resultType="dept" parameterType="Long">
-        select * from dept where deptno = #{deptno}
+    <select id="queryById" resultMap="BaseResultMap" parameterType="Long">
+        select * from dept where id = #{id}
     </select>
 
-    <select id="queryAll" resultType="dept">
+    <select id="queryAll" resultMap="BaseResultMap">
         select * from dept
     </select>
 </mapper>

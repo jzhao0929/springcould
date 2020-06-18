@@ -8,38 +8,38 @@ import java.io.Serializable;
  * @Date 2020-6-16 23:31
  **/
 public class Dept implements Serializable {
-    private Long deptno;
-    private String deptname;
-    private String db_source;
+    private Long id;
+    private String deptName;
+    private String dbSource;
 
     public Dept() {
     }
 
-    public Dept(String db_source) {
-        this.db_source = db_source;
+    public Dept(String dbSource) {
+        this.dbSource = dbSource;
     }
 
-    public Long getDeptno() {
-        return deptno;
+    public Long getId() {
+        return id;
     }
 
-    public void setDeptno(Long deptno) {
-        this.deptno = deptno;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getDeptname() {
-        return deptname;
+    public String getDeptName() {
+        return deptName;
     }
 
-    public void setDeptname(String deptname) {
-        this.deptname = deptname;
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
     }
 
-    public String getDb_source() {
-        return db_source;
+    public String getDbSource() {
+        return dbSource;
     }
 
-    public void setDb_source(String db_source) {
-        this.db_source = db_source;
+    public void setDbSource(String dbSource) {
+        this.dbSource = dbSource;
     }
 }

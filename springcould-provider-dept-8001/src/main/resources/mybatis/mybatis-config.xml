@@ -6,5 +6,12 @@
     <settings>
         <!--开启二级缓存-->
         <setting name="cacheEnabled" value="true"/>
+        <!--开启驼峰命名-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
+
+    <!--配置数据源，交给Spring管理-->
+    <typeAliases>
+        <package name="com.study.springcould.pojo" />
+    </typeAliases>
 </configuration>
