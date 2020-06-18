@@ -20,6 +20,12 @@ public class ConfigBean {
       * @author: 2020-6-18 9:45 jzhao
       * @reviser and other massage: 
       */
+    //IRule
+    //AvailabilityFilteringRule：先过滤掉跳闸的服务
+    //RoundRobinRule：轮询
+    //RandomRule：随机
+    //RetryRule：会先按照轮询获取服务，如果获取失败，会在指定的时间内进行重试
+    //WeightedResponseTimeRule：权重
     @Bean
     @LoadBalanced //Ribbon
     public RestTemplate getRestTemplate(){

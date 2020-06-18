@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.List;
 
 /**
@@ -49,7 +50,7 @@ public class DeptController {
     @GetMapping("/dept/discovery")
     public Object discovery(){
         List<String> services = client.getServices();
-        System.out.println("discovery--1=>services" + services);
+        System.out.println("discovery--2=>services" + services);
         //得到具体的微服务信息，通过具体的微服务id获取
         List<ServiceInstance> instances = client.getInstances("SPRINGCOULD-PROVIDER-DEPT");
         for (ServiceInstance instance : instances) {
