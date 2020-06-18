@@ -20,7 +20,7 @@ public class ConfigBean {
       * @author: 2020-6-18 9:45 jzhao
       * @reviser and other massage: 
       */
-    //IRule
+    //IRule接口
     //AvailabilityFilteringRule：先过滤掉跳闸的服务
     //RoundRobinRule：轮询
     //RandomRule：随机
