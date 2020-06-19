@@ -14,7 +14,7 @@ import java.util.List;
  * @Date 2020-6-19 9:01
  **/
 @Component
-@FeignClient(value = "SPRINGCOULD-PROVIDER-DEPT")
+@FeignClient(value = "SPRINGCOULD-PROVIDER-DEPT",fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
    @GetMapping("/dept/get/{id}")
