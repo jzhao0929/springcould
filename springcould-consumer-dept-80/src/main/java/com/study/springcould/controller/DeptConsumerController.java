@@ -2,10 +2,7 @@ package com.study.springcould.controller;
 
 import com.study.springcould.pojo.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
@@ -27,12 +24,12 @@ public class DeptConsumerController {
         return restTemplate.postForObject(REST_URL_PREFIX+"/dept/add",dept,Boolean.class);
     }
 
-    @RequestMapping("/consumer/dept/get/{id}")
+    @GetMapping("/consumer/dept/get/{id}")
     public Dept queryById(@PathVariable("id") Long id){
         return restTemplate.getForObject(REST_URL_PREFIX+"/dept/get/"+id,Dept.class);
     }
 
-    @RequestMapping("/consumer/dept/list")
+    @GetMapping("/consumer/dept/list")
     public List<Dept> queryAll(){
         return restTemplate.getForObject(REST_URL_PREFIX+"/dept/list", List.class);
     }
