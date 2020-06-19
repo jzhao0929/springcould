@@ -12,7 +12,12 @@
     <artifactId>springcould-api</artifactId>
     <!--当前Module自己需要的依赖,父依赖中已经写了版本则可以不写-->
     <dependencies>
-
+        <!--Feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
     </dependencies>
 
 </project>
