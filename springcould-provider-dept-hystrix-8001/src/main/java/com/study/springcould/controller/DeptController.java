@@ -13,12 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @Author jzhao
  * @Date 2020-6-17 0:26
  **/
-
 @RestController
 public class DeptController {
     @Autowired
     private DeptService deptService;
-
 
     @GetMapping("/dept/get/{id}")
     @HystrixCommand(fallbackMethod = "hystrixQueryById")

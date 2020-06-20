@@ -18,6 +18,8 @@
         <module>springcould-provider-dept-8003</module>
         <module>springcould-consumer-dept-feign</module>
         <module>springcould-provider-dept-hystrix-8001</module>
+        <module>springcould-consumer-hystrix-dashboard</module>
+        <module>springcould-zuul-9527</module>
     </modules>
 
     <!--打包方式 pom-->

@@ -25,4 +25,5 @@ public interface DeptClientService {
 
    @PostMapping("/dept/add")
    boolean addDept(Dept dept);
+
 }

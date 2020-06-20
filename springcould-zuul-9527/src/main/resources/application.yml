@@ -1,0 +1,24 @@
+# 配置端口号
+server:
+  port: 9527
+# Spring配置
+spring:
+  application:
+    name: springcould-zuul
+# Eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: springcould-zuul-9527
+    prefer-ip-address: true
+# info配置
+info:
+  app.name: jzhao-springcould
+  company.name: aostar
+zuul:
+  routes:
+    mydept.serviceId: springcould-provider-dept
+    mydept.path: /mydept/**
+  ignored-services: "*" # 不能使用微服务名称去访问，本项目中指的是“springcould-provider-dept”

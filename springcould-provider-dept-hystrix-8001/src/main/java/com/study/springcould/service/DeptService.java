@@ -1,7 +1,6 @@
 package com.study.springcould.service;
 
 import com.study.springcould.pojo.Dept;
-
 import java.util.List;
 
 public interface DeptService {

@@ -12,7 +12,7 @@
     <artifactId>springcould-provider-dept-hystrix-8001</artifactId>
 
     <dependencies>
-        <!--服务提供的hystrix配置-->
+        <!--服务提供的hystrix配置；Hystrix配置,配合hystrix监控页面，豪猪页面-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
