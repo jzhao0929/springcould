@@ -21,6 +21,7 @@
         <module>springcould-consumer-hystrix-dashboard</module>
         <module>springcould-zuul-9527</module>
         <module>springcould-config-server-3344</module>
+        <module>springcould-config-client-3355</module>
     </modules>
 
     <!--打包方式 pom-->

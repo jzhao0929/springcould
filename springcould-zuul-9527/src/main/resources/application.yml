@@ -17,6 +17,7 @@ eureka:
 info:
   app.name: jzhao-springcould
   company.name: aostar
+# 路由网关
 zuul:
   routes:
     mydept.serviceId: springcould-provider-dept
