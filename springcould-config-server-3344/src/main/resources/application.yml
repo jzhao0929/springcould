@@ -1,0 +1,10 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: springcould-config-server-3344
+  could:
+    config:
+      server:
+        git:
+          uri: https://github.com/jzhao0929/springcould-config.git
